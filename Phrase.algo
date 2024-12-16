@@ -1,0 +1,25 @@
+ALGORITHM Phrase
+VAR
+  INTEGER Longeur := 0;
+  INTEGER nb_mots := 1;
+  INTEGER nb_voyelles := 0;
+  CHAR caractere;
+  INTEGER voyelles := "a, e, i, o, u, y, A, E, I, O, U, Y"
+   STRING phrase;
+BEGIN
+   Read phrase; 
+   FOR i FROM 1 TO Longeur   DO
+    Longeur := Longeur +1;
+    IF (caractere = " ") THEN
+       nb_mots:= nb_mots+1;
+    END_IF
+    IF (caractere in {"a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"}) THEN
+       nb_voyelles:= nb_voyelles+1;
+    END_IF
+   END_FOR
+  Write("Longeur de la phrase :", Longeur);
+  Write("Nombre de mots dans la phrase:", nb_mots);
+  Write("Nombre de voyelles dans la phrase: ",nb_voyelles);
+   
+ 
+END
